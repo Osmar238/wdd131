@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#menu-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+header nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #004a99;
+}
+
+header nav.open {
+    display: block;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+header nav a:hover {
+    background-color: #005bc5;
+}
+
+main {
+    max-width: 960px; 
+    margin: 1rem auto;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+main h1 {
+    grid-column: 1 / -1; 
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+figure {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    padding: 0.75rem;
+    font-style: italic;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #003366;
+    color: white;
+    margin-top: 1rem;
+}

@@ -1,0 +1,40 @@
+/* Media Query para vistas más grandes (ej. 600px o más) */
+/* TODO el código debe estar DENTRO de estas llaves */
+@media (min-width: 600px) {
+
+    /* --- NAVEGACIÓN (ESCRITORIO) --- */
+    
+    /* Ocultamos el botón de hamburguesa */
+    #menu-button {
+        display: none;
+    }
+
+    /* Mostramos la navegación y la volvemos estática */
+    header nav {
+        display: block;
+        position: static;
+        background: none;
+    }
+
+    /* Usamos Flexbox para el menú horizontal */
+    header nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    header nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+    
+    header nav a:hover {
+        background-color: #005bc5;
+    }
+
+    /* --- MAIN (ESCRITORIO - MÚLTIPLES COLUMNAS) --- */
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+}
+/* NO pongas ninguna regla de CSS después de esta llave de cierre */
