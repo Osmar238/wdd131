@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --------------------------------------------------
-  // 1. FOOTER Y MENU (Tu código original)
-  // --------------------------------------------------
   const yearSpan = document.getElementById('currentyear');
   const currentYear = new Date().getFullYear();
   yearSpan.textContent = currentYear;
@@ -23,9 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --------------------------------------------------
-  // 2. ARRAY DE TEMPLOS
-  // --------------------------------------------------
   const temples = [
     {
       templeName: "Aba Nigeria",
@@ -83,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // TUS TEMPLOS NUEVOS
+    
     {
       templeName: "Arequipa Peru Temple",
       location: "Arequipa, Peru",
@@ -110,9 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  // --------------------------------------------------
-  // 3. FUNCION PARA GENERAR LAS TARJETAS (NUEVO)
-  // --------------------------------------------------
   function createTempleCard(filteredTemples) {
     document.querySelector("#album").innerHTML = "";
     filteredTemples.forEach(temple => {
@@ -141,11 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. LLAMADA INICIAL (Para que se vean al cargar la página)
   createTempleCard(temples);
-// --------------------------------------------------
-  // 5. FILTROS (LISTENERS)
-  // --------------------------------------------------
+
 
   const homeLink = document.querySelector("#home");
   const oldLink = document.querySelector("#old");
@@ -153,12 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const largeLink = document.querySelector("#large");
   const smallLink = document.querySelector("#small");
 
-  // Filtro: Home (Todos)
   homeLink.addEventListener("click", () => {
     createTempleCard(temples);
   });
 
-  // Filtro: Old (Anteriores a 1900)
   oldLink.addEventListener("click", () => {
     const filtered = temples.filter(temple => {
         const year = parseInt(temple.dedicated.substring(0, 4));
@@ -167,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createTempleCard(filtered);
   });
 
-  // Filtro: New (Posteriores a 2000)
   newLink.addEventListener("click", () => {
     const filtered = temples.filter(temple => {
         const year = parseInt(temple.dedicated.substring(0, 4));
@@ -176,13 +161,11 @@ document.addEventListener('DOMContentLoaded', () => {
     createTempleCard(filtered);
   });
 
-  // Filtro: Large (Mayores a 90,000 sq ft)
   largeLink.addEventListener("click", () => {
     const filtered = temples.filter(temple => temple.area > 90000);
     createTempleCard(filtered);
   });
 
-  // Filtro: Small (Menores a 10,000 sq ft)
   smallLink.addEventListener("click", () => {
     const filtered = temples.filter(temple => temple.area < 10000);
     createTempleCard(filtered);

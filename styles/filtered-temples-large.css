@@ -1,27 +1,22 @@
-/* Media Query para escritorio (600px o más) */
+
 @media (min-width: 600px) {
 
-    /* --- NAVEGACIÓN (ESCRITORIO) --- */
-    
-    /* Ocultamos el botón de hamburguesa */
     #menu-button {
         display: none;
     }
 
-    /* Mostramos la navegación siempre */
     header nav {
         display: block;
-        position: static; /* Ya no flota */
+        position: static; 
         background: none;
         margin-top: 0;
     }
 
-    /* Menú horizontal */
     header nav ul {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end; /* Alineado a la derecha */
-        gap: 20px; /* Espacio entre palabras */
+        justify-content: flex-end;
+        gap: 20px;
         margin: 0;
         padding: 0;
     }
@@ -30,8 +25,4 @@
         padding: 0.5rem 1rem;
         font-size: 1.1rem;
     }
-
-    /* NOTA: No necesitamos tocar el Grid aquí. 
-       El comando 'auto-fit' en el archivo base ya se encarga 
-       de poner 1 columna en móvil y 3 en escritorio automáticamente. */
 }

@@ -62,10 +62,9 @@ header nav a:hover {
 }
 
 main {
-    max-width: 1200px; /* Le damos más espacio para que quepan 3 tarjetas */
+    max-width: 1200px;
     margin: 1rem auto;
     padding: 1rem;
-    /* Quitamos el display: grid de aquí porque el grid ahora lo controla #album */
 }
 
 main h1 {
@@ -103,33 +102,29 @@ footer {
     margin-top: 1rem;
 }
 
-/* --- Estilos para el Grid de Templos --- */
-
-/* El contenedor principal */
 #album {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    align-items: center; /* Alinea verticalmente si las alturas varían */
+    align-items: center;
     margin: 20px auto;
     max-width: 1200px;
     padding: 0 10px;
 }
 
-/* Las tarjetas individuales (generadas por JS como <section>) */
 #album section {
-    background-color: #eee; /* Color de fondo gris claro */
+    background-color: #eee; 
     border: 1px solid #bbb;
-    padding: 0; /* Sin padding para que la imagen toque los bordes si quieres */
+    padding: 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
-    border-radius: 5px; /* Bordes redondeados */
-    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    border-radius: 5px; 
+    overflow: hidden;
 }
 
-/* Títulos y textos dentro de la tarjeta */
+
 #album section h3 {
-    background-color: #333; /* Fondo oscuro para el título */
+    background-color: #333; 
     color: #fff;
     margin: 0;
     padding: 15px;
@@ -141,16 +136,15 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Etiquetas (Label) en negrita (ej: Location:, Size:) */
 .label {
     font-weight: bold;
     color: #555;
 }
 
-/* Las imágenes */
+
 #album section img {
-    width: 100%;    /* Ancho completo de la tarjeta */
-    height: 250px;  /* Altura fija para uniformidad */
-    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
+    width: 100%;
+    height: 250px;  
+    object-fit: cover; 
     display: block;
 }
