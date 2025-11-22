@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#menu-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+header nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #004a99;
+}
+
+header nav.open {
+    display: block;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+header nav a:hover {
+    background-color: #005bc5;
+}
+
+main {
+    max-width: 1200px; /* Le damos más espacio para que quepan 3 tarjetas */
+    margin: 1rem auto;
+    padding: 1rem;
+    /* Quitamos el display: grid de aquí porque el grid ahora lo controla #album */
+}
+
+main h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+figure {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    padding: 0.75rem;
+    font-style: italic;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #003366;
+    color: white;
+    margin-top: 1rem;
+}
+
+/* --- Estilos para el Grid de Templos --- */
+
+/* El contenedor principal */
+#album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    align-items: center; /* Alinea verticalmente si las alturas varían */
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 10px;
+}
+
+/* Las tarjetas individuales (generadas por JS como <section>) */
+#album section {
+    background-color: #eee; /* Color de fondo gris claro */
+    border: 1px solid #bbb;
+    padding: 0; /* Sin padding para que la imagen toque los bordes si quieres */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+}
+
+/* Títulos y textos dentro de la tarjeta */
+#album section h3 {
+    background-color: #333; /* Fondo oscuro para el título */
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+}
+
+#album section p {
+    padding: 10px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Etiquetas (Label) en negrita (ej: Location:, Size:) */
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Las imágenes */
+#album section img {
+    width: 100%;    /* Ancho completo de la tarjeta */
+    height: 250px;  /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
+    display: block;
+}
