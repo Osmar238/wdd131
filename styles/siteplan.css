@@ -1,0 +1,71 @@
+:root {
+    --primary: #8B4513; 
+    --secondary: #FFF8DC; 
+    --accent: #D2691E;   
+    --text-dark: #333;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--secondary);
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+header, footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+}
+
+h3 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.section-content {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.colors-table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.colors-table td {
+    padding: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    border: 1px solid #ddd;
+}
+
+.primary-color { background-color: var(--primary); }
+.secondary-color { 
+    background-color: var(--secondary); 
+    color: var(--text-dark) !important; 
+    text-shadow: none !important;
+}
+.accent-color { background-color: var(--accent); }
+
+.font-demo {
+    border: 1px dashed var(--accent);
+    padding: 15px;
+    background-color: #fafafa;
+}
