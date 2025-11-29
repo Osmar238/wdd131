@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    background-color: #764ba2; 
+    color: white; 
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+form {
+    background: white;
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+fieldset {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff; 
+}
+
+legend {
+    font-weight: bold;
+    color: white;
+    background-color: #9969c7;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+}
+
+input[type="text"], 
+input[type="date"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #8ec5fc;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(142, 197, 252, 0.5);
+}
+
+.submitBtn {
+    background: linear-gradient(to right, #9969c7, #764ba2);
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: filter 0.3s;
+}
+
+.submitBtn:hover {
+    filter: brightness(1.1);
+}
+
+.rating-container { margin: 1rem 0; }
+
+.stars { 
+    display: flex; 
+    flex-direction: row-reverse; 
+    justify-content: flex-end; 
+}
+
+.stars input { display: none; }
+
+.stars label {
+    font-size: 2.2rem;
+    color: #ddd;
+    cursor: pointer;
+    padding-right: 5px;
+    transition: color 0.2s;
+}
+
+.stars input:checked ~ label { color: #ffc107; }
+.stars label:hover, .stars label:hover ~ label { color: #ffdb70; }
+
+footer {
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px; 
+    }
+
+    header {
+        padding: 1rem 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 1.2rem; 
+    }
+
+    input[type="text"], 
+    input[type="date"], 
+    select, 
+    textarea {
+        font-size: 16px; 
+    }
+
+    .stars label {
+        font-size: 1.8rem;
+        padding-right: 2px;
+    }
+    
+    .submitBtn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
