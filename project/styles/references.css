@@ -1,0 +1,62 @@
+/* styles/references.css */
+
+/* Contenedor tipo tarjeta */
+.ref-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--accent); /* Detalle de color al lado */
+}
+
+/* Título principal */
+.ref-container h2 {
+    color: var(--primary);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+}
+
+.ref-intro {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Subtítulos */
+.ref-container h3 {
+    color: var(--text);
+    margin-top: 30px;
+    font-size: 1.3rem;
+}
+
+/* Listas de referencias */
+.ref-list {
+    list-style: none; /* Quitamos los puntos por defecto */
+    padding: 0;
+}
+
+.ref-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-left: 3px solid #ccc;
+    font-size: 0.95rem;
+}
+
+.ref-list li strong {
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+/* Botón de regreso */
+.ref-footer {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}

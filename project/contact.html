@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta a Panadería La Joya para pedidos especiales.">
+    <title>Contacto | Panadería La Joya</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header class="hero-header" style="height: 150px;"> <h1 class="logo">
+            <a href="index.html">La Joya</a>
+        </h1>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="nav-item">INICIO</a></li>
+            <li><a href="siteplan.html" class="nav-item">PLAN</a></li>
+            <li><a href="contact.html" class="nav-item active">CONTACTO</a></li>
+            <li>
+                <a href="#" class="nav-item">
+                    CARRITO 
+                    <span id="cart-count" class="badge-counter">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contact-form">
+            <h2>Haz tu Pedido Especial</h2>
+            <p>¿Necesitas pan para un evento o tienes un antojo específico? Llena este formulario.</p>
+
+            <form action="thanks.html" method="get">
+                
+                <label for="fullname">Nombre Completo:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Tu nombre aquí" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+                <label for="bread-type">¿Qué tipo de pan te interesa?</label>
+                <select id="bread-type" name="bread-type">
+                    <option value="concha">Conchas</option>
+                    <option value="bolillo">Bolillos</option>
+                    <option value="variado">Surtido Variado</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="quantity">Cantidad aproximada (piezas):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" value="10">
+
+                <label for="details">Detalles adicionales:</label>
+                <textarea id="details" name="details" rows="4" placeholder="Escribe aquí si tienes alguna preferencia especial..."></textarea>
+
+                <button type="submit">Enviar Solicitud de Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Panadería La Joya</p>
+        <p><a href="references.html" style="color: #ccc;">Referencias de Imágenes</a></p>
+    </footer>
+
+</body>
+</html>

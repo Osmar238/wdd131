@@ -1,0 +1,273 @@
+/* main.css - WDD 131 Final Project */
+
+/* --- 1. VARIABLES & RESET (Rubric: Contemporary CSS) --- */
+:root {
+    --primary: #8B4513;   /* SaddleBrown - Color de la panadería */
+    --secondary: #FFF8DC; /* Cornsilk - Fondo suave */
+    --accent: #d4af37;    /* Dorado - Detalles */
+    --text: #333;
+    --white: #ffffff;
+    --success: #28a745;   /* Verde */
+}
+
+* {
+    box-sizing: border-box; /* Manejo estándar de cajas */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* --- 2. HEADER Y HERO --- */
+.hero-header {
+    height: 250px;
+    /* IMPORTANTE: La ruta de la imagen cambia porque estamos dentro de la carpeta 'styles' */
+    /* Asegúrate de tener una imagen llamada 'hero-bg.jpg' en tu carpeta 'images' */
+    background-image: url('../images/grocery-bakery-hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    color: var(--accent);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    /* CAMBIO: Usar nowrap para obligar a mantenerse en línea horizontal en PC */
+    flex-wrap: nowrap; 
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrado para mejor diseño */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+}
+
+.badge-counter {
+    background-color: var(--accent);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 11px;
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+/* Botón Login Estático */
+.btn-login {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--white);
+    background-color: #007bff;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+/* --- 4. GRID DE PRODUCTOS (Responsive) --- */
+.product-grid {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    /* Esto asegura que sea responsivo sin necesidad de muchas media queries */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 25px;
+    min-height: 300px; /* Evita que colapse si está vacío */
+}
+
+/* --- 5. TARJETAS (Generadas por JS) --- */
+.card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    background-color: #f0f0f0;
+}
+
+.card h3 {
+    padding: 0 15px;
+    margin: 15px 0 5px;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.card p {
+    padding: 0 15px;
+    margin: 5px 0;
+    color: #666;
+}
+
+.card .price {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* --- 6. FORMULARIOS (Para contact.html) --- */
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.contact-form input, 
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    background-color: var(--success);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+
+/* --- 7. FOOTER --- */
+footer {
+    background-color: #343a40;
+    color: #ccc;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.aviso-recogida {
+    background-color: #fff3cd;
+    color: #856404;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ffeeba;
+}
+
+/* --- 8. MEDIA QUERIES --- */
+@media (max-width: 600px) {
+    .hero-header { height: 180px; }
+    .logo a { font-size: 40px; }
+    .main-nav ul { flex-direction: column; }
+    .nav-item { padding: 10px; width: 100%; text-align: center; }
+}
+
+.toast {
+    visibility: hidden; /* Invisible al inicio */
+    min-width: 250px;
+    background-color: #333; /* Fondo oscuro elegante */
+    color: #fff;
+    text-align: center;
+    border-radius: 50px; /* Bordes muy redondos */
+    padding: 16px;
+    position: fixed; /* Flotante */
+    z-index: 2000; /* Encima de todo */
+    left: 50%;
+    bottom: 30px; /* Posición abajo al centro */
+    transform: translateX(-50%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+    font-weight: bold;
+}
+
+/* Cuando se activa esta clase con JS, el mensaje aparece */
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px; /* Sube un poquito al aparecer (efecto visual) */
+}
