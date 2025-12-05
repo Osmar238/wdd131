@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Referencias | Panadería La Joya</title>
+    <title>Referencias y Créditos | Panadería La Joya</title>
+    
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/references.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="hero-header" style="height: 150px;">
-        <h1 class="logo">
-            <a href="index.html">La Joya</a>
-        </h1>
+        <h1 class="logo"><a href="index.html">La Joya</a></h1>
     </header>
 
     <nav class="main-nav">
@@ -24,32 +24,66 @@
         </ul>
     </nav>
 
-    <main style="max-width: 800px; margin: 40px auto; padding: 30px; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h2 style="color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px;">Referencias y Créditos</h2>
+    <main class="ref-container">
+        <h2>Documentación del Proyecto</h2>
         
-        <p>Este sitio web fue desarrollado por <strong>Osmar Arevalo</strong> para el curso WDD 131.</p>
+        <p class="ref-intro">
+            Este sitio web fue diseñado y desarrollado por <strong>Osmar Arevalo Molina</strong> como proyecto final para la asignatura <strong>WDD 131: Dynamic Web Fundamentals</strong> (BYU-Pathway Worldwide).
+        </p>
 
-        <h3>Imágenes</h3>
-        <ul style="line-height: 1.8;">
-            <li><strong>Imagen de Portada (Hero):</strong> Recuperada de Unsplash / Archivo Personal.</li>
-            <li><strong>Fotos de Productos (Conchas, Donas, etc.):</strong> Imágenes con fines ilustrativos recuperadas de Freepik y fuentes de uso libre.</li>
-            <li><strong>Iconos:</strong> Se utilizaron caracteres Unicode estándar y diseño CSS propio.</li>
+        <h3>1. Recursos Gráficos y Multimedia</h3>
+        <ul class="ref-list">
+            <li>
+                <strong>Fuente de Imágenes:</strong> 
+                Todas las fotografías utilizadas en este proyecto (portada, productos y panadería) fueron recopiladas a través del motor de búsqueda de <strong>Google Imágenes</strong>.
+            </li>
+            <li>
+                <strong>Descargo de Responsabilidad (Disclaimer):</strong> 
+                Estas imágenes se utilizan estrictamente con <strong>fines educativos y demostrativos</strong> bajo el principio de uso justo (Fair Use). No se pretende infringir derechos de autor ni obtener lucro comercial con este proyecto escolar.
+            </li>
+            <li>
+                <strong>Iconografía:</strong> 
+                Se utilizaron gráficos vectoriales (SVG) de código abierto para los iconos de éxito y navegación.
+            </li>
         </ul>
 
-        <h3>Recursos de Código</h3>
-        <ul style="line-height: 1.8;">
-            <li><strong>Fuentes:</strong> <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> (Playfair Display & Segoe UI).</li>
-            <li><strong>CSS Reset & Estructura:</strong> Basado en los principios de diseño responsivo de WDD 131.</li>
-            <li><strong>JavaScript:</strong> Lógica de generación de tarjetas y carrito desarrollada por el autor.</li>
+        <h3>2. Tecnologías Implementadas</h3>
+        <ul class="ref-list">
+            <li>
+                <strong>HTML5 Semántico:</strong> Estructura del sitio optimizada para accesibilidad y SEO (etiquetas <code>main</code>, <code>nav</code>, <code>header</code>, <code>footer</code>).
+            </li>
+            <li>
+                <strong>CSS3 Moderno:</strong> 
+                <ul>
+                    <li>Uso de <em>CSS Grid</em> para la galería responsiva de productos.</li>
+                    <li>Uso de <em>Flexbox</em> para la navegación y alineación de elementos.</li>
+                    <li>Variables CSS (<code>:root</code>) para la gestión consistente de la paleta de colores.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>JavaScript (ES6+):</strong>
+                <ul>
+                    <li>Manipulación del DOM para la inyección dinámica de tarjetas de productos.</li>
+                    <li>Uso de <code>localStorage</code> para la persistencia de datos del carrito de compras.</li>
+                    <li>Funciones asíncronas simuladas (<code>setTimeout</code>) para mejorar la experiencia de usuario (UX).</li>
+                </ul>
+            </li>
         </ul>
 
-        <div style="margin-top: 40px; text-align: center;">
+        <h3>3. Herramientas de Desarrollo</h3>
+        <ul class="ref-list">
+            <li><strong>Editor de Código:</strong> Visual Studio Code.</li>
+            <li><strong>Control de Versiones:</strong> Git & GitHub.</li>
+            <li><strong>Fuentes Tipográficas:</strong> <em>Playfair Display</em> y <em>Segoe UI</em> (vía Google Fonts).</li>
+        </ul>
+
+        <div class="ref-footer">
             <a href="index.html" class="btn-login" style="display: inline-block; margin: 0;">Volver al Inicio</a>
         </div>
     </main>
 
     <footer>
-        <p>© 2025 Panadería La Joya</p>
+        <p>© 2025 Panadería La Joya - Desarrollo Web Académico</p>
     </footer>
 
 </body>

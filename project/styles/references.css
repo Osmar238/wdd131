@@ -1,6 +1,4 @@
-/* styles/references.css */
 
-/* Contenedor tipo tarjeta */
 .ref-container {
     max-width: 800px;
     margin: 40px auto;
@@ -8,10 +6,10 @@
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-    border-left: 5px solid var(--accent); /* Detalle de color al lado */
+    border-left: 5px solid var(--accent); 
 }
 
-/* Título principal */
+
 .ref-container h2 {
     color: var(--primary);
     border-bottom: 2px solid #eee;
@@ -26,16 +24,16 @@
     margin-bottom: 30px;
 }
 
-/* Subtítulos */
+
 .ref-container h3 {
     color: var(--text);
     margin-top: 30px;
     font-size: 1.3rem;
 }
 
-/* Listas de referencias */
+
 .ref-list {
-    list-style: none; /* Quitamos los puntos por defecto */
+    list-style: none; 
     padding: 0;
 }
 
@@ -53,7 +51,6 @@
     margin-right: 5px;
 }
 
-/* Botón de regreso */
 .ref-footer {
     margin-top: 40px;
     text-align: center;

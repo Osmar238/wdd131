@@ -1,17 +1,15 @@
-/* main.css - WDD 131 Final Project */
 
-/* --- 1. VARIABLES & RESET (Rubric: Contemporary CSS) --- */
 :root {
-    --primary: #8B4513;   /* SaddleBrown - Color de la panadería */
-    --secondary: #FFF8DC; /* Cornsilk - Fondo suave */
-    --accent: #d4af37;    /* Dorado - Detalles */
+    --primary: #8B4513;  
+    --secondary: #FFF8DC; 
+    --accent: #d4af37;  
     --text: #333;
     --white: #ffffff;
-    --success: #28a745;   /* Verde */
+    --success: #28a745;  
 }
 
 * {
-    box-sizing: border-box; /* Manejo estándar de cajas */
+    box-sizing: border-box; 
 }
 
 body {
@@ -23,11 +21,8 @@ body {
     line-height: 1.6;
 }
 
-/* --- 2. HEADER Y HERO --- */
 .hero-header {
     height: 250px;
-    /* IMPORTANTE: La ruta de la imagen cambia porque estamos dentro de la carpeta 'styles' */
-    /* Asegúrate de tener una imagen llamada 'hero-bg.jpg' en tu carpeta 'images' */
     background-image: url('../images/grocery-bakery-hero.jpg'); 
     background-size: cover;
     background-position: center;
@@ -64,8 +59,6 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    
-    /* CAMBIO: Usar nowrap para obligar a mantenerse en línea horizontal en PC */
     flex-wrap: nowrap; 
 }
 
@@ -74,7 +67,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centrado para mejor diseño */
+    justify-content: center; 
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -107,7 +100,6 @@ body {
     vertical-align: top;
 }
 
-/* Botón Login Estático */
 .btn-login {
     display: flex;
     align-items: center;
@@ -121,19 +113,16 @@ body {
     margin-left: 15px;
 }
 
-/* --- 4. GRID DE PRODUCTOS (Responsive) --- */
 .product-grid {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
     display: grid;
-    /* Esto asegura que sea responsivo sin necesidad de muchas media queries */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 25px;
-    min-height: 300px; /* Evita que colapse si está vacío */
+    min-height: 300px;
 }
 
-/* --- 5. TARJETAS (Generadas por JS) --- */
 .card {
     background-color: var(--white);
     border-radius: 12px;
@@ -153,7 +142,7 @@ body {
 .card img {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* Asegura que la imagen no se deforme */
+    object-fit: cover; 
     background-color: #f0f0f0;
 }
 
@@ -177,7 +166,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* --- 6. FORMULARIOS (Para contact.html) --- */
 .contact-form {
     max-width: 600px;
     margin: 20px auto;
@@ -221,7 +209,6 @@ body {
     background-color: #218838;
 }
 
-/* --- 7. FOOTER --- */
 footer {
     background-color: #343a40;
     color: #ccc;
@@ -238,7 +225,6 @@ footer {
     border-bottom: 1px solid #ffeeba;
 }
 
-/* --- 8. MEDIA QUERIES --- */
 @media (max-width: 600px) {
     .hero-header { height: 180px; }
     .logo a { font-size: 40px; }
@@ -247,17 +233,17 @@ footer {
 }
 
 .toast {
-    visibility: hidden; /* Invisible al inicio */
+    visibility: hidden;
     min-width: 250px;
-    background-color: #333; /* Fondo oscuro elegante */
+    background-color: #333; 
     color: #fff;
     text-align: center;
-    border-radius: 50px; /* Bordes muy redondos */
+    border-radius: 50px; 
     padding: 16px;
-    position: fixed; /* Flotante */
-    z-index: 2000; /* Encima de todo */
+    position: fixed; 
+    z-index: 2000; 
     left: 50%;
-    bottom: 30px; /* Posición abajo al centro */
+    bottom: 30px; 
     transform: translateX(-50%);
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     opacity: 0;
@@ -265,9 +251,8 @@ footer {
     font-weight: bold;
 }
 
-/* Cuando se activa esta clase con JS, el mensaje aparece */
 .toast.show {
     visibility: visible;
     opacity: 1;
-    bottom: 50px; /* Sube un poquito al aparecer (efecto visual) */
+    bottom: 50px; 
 }

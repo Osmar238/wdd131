@@ -1,0 +1,75 @@
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto; 
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--primary);
+}
+
+.contact-form h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-form p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form input[type="number"],
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3); 
+    background-color: #fff;
+}
+
+/* Botón de envío */
+.contact-form button {
+    background-color: var(--success);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #218838; 
+    transform: translateY(-2px); 
+}
